@@ -1,0 +1,6 @@
+.env
+/jenkins/jenkins_home
+/logs
+
+/logstash/pipeline/*.conf
+/logstash/config/pipelines.yml
