@@ -7,11 +7,10 @@
 sysctl -w vm.max_map_count=262144
 
 docker compose up -d \
-	elasticsearch \
-	kibana \
+	opensearch \
 	mysql \
 	mongo \
 	redis \
 	memcached \
 	rabbitmq \
-
+	minio \
