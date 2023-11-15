@@ -13,4 +13,4 @@ docker compose up -d \
 	redis \
 	memcached \
 	rabbitmq \
-	minio \
+	mailpit \
