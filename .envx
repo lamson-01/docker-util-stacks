@@ -1,0 +1,148 @@
+
+# Choose storage path on your machine. For all storage systems
+DATA_PATH_HOST=~/.stack-docker/data
+
+### Drivers ################################################
+
+# All volumes driver
+VOLUMES_DRIVER=local
+
+# All Networks driver
+NETWORKS_DRIVER=bridge
+
+### WORKSPACE #############################################
+
+WORKSPACE_TIMEZONE=UTC
+
+# Define the prefix of container names. This is useful if you have multiple projects that use laradock to have separate containers per project.
+COMPOSE_PROJECT_NAME=stack_docker
+
+### NGINX #################################################
+
+NGINX_HOST_HTTP_PORT=80
+NGINX_HOST_HTTPS_PORT=443
+NGINX_HOST_LOG_PATH=./logs/nginx/
+NGINX_SITES_PATH=./nginx/sites/
+NGINX_SSL_PATH=./nginx/ssl/
+
+
+### MYSQL #################################################
+
+MYSQL_VERSION=latest
+MYSQL_DATABASE=default
+MYSQL_USER=default
+MYSQL_PASSWORD=secret
+MYSQL_PORT=3306
+MYSQL_ROOT_PASSWORD=root
+MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d
+
+### MARIADB ###############################################
+
+MARIADB_VERSION=latest
+MARIADB_DATABASE=default
+MARIADB_USER=default
+MARIADB_PASSWORD=secret
+MARIADB_PORT=3306
+MARIADB_ROOT_PASSWORD=root
+MARIADB_ENTRYPOINT_INITDB=./mariadb/docker-entrypoint-initdb.d
+
+### POSTGRES ##############################################
+
+POSTGRES_VERSION=alpine
+POSTGRES_DB=default
+POSTGRES_USER=default
+POSTGRES_PASSWORD=secret
+POSTGRES_PORT=5432
+POSTGRES_ENTRYPOINT_INITDB=./postgres/docker-entrypoint-initdb.d
+
+### MONGODB ###############################################
+
+MONGODB_PORT=27017
+MONGO_USERNAME=root
+MONGO_PASSWORD=example
+
+### REDIS #################################################
+
+REDIS_PORT=6379
+REDIS_PASSWORD=secret_redis
+
+### REDIS CLUSTER #########################################
+
+REDIS_CLUSTER_PORT_RANGE=7000-7005
+
+### MINIO #################################################
+
+MINIO_PORT=9000
+MINIO_CONSOLE_PORT=9001
+MINIO_ROOT_USER=laradock
+MINIO_ROOT_PASSWORD=laradock
+
+### PHP MY ADMIN ##########################################
+
+# Accepted values: mariadb - mysql
+
+PMA_DB_ENGINE=mysql
+
+# Credentials/Port:
+
+PMA_USER=default
+PMA_PASSWORD=secret
+PMA_ROOT_PASSWORD=secret
+PMA_PORT=8081
+PMA_MAX_EXECUTION_TIME=600
+PMA_MEMORY_LIMIT=256M
+PMA_UPLOAD_LIMIT=2G
+
+### JENKINS ###############################################
+
+JENKINS_HOST_HTTP_PORT=8090
+JENKINS_HOST_SLAVE_AGENT_PORT=50000
+JENKINS_HOME=./jenkins/jenkins_home
+
+### KIBANA ################################################
+
+KIBANA_HTTP_PORT=5601
+
+### ELASTICSEARCH #########################################
+
+ELASTICSEARCH_HOST_HTTP_PORT=9200
+ELASTICSEARCH_HOST_TRANSPORT_PORT=9300
+
+### ELK Stack ##################################################
+ELK_VERSION=7.17.0
+
+### OPENSEARCH #########################################
+
+OPENSEARCH_HOST_HTTP_PORT=9400
+OPENSEARCH_HOST_TRANSPORT_PORT=9600
+
+### OPENSEARCH Stack ##################################################
+OPENSEARCH_VERSION=latest
+
+### MEMCACHED #############################################
+
+MEMCACHED_HOST_PORT=11211
+
+### RABBITMQ ##############################################
+
+RABBITMQ_NODE_HOST_PORT=5672
+RABBITMQ_MANAGEMENT_HTTP_HOST_PORT=15672
+RABBITMQ_MANAGEMENT_HTTPS_HOST_PORT=15671
+RABBITMQ_WEB_STOMP_HOST_PORT=15674
+
+### GRAFANA ##############################################
+
+GRAFANA_PORT=3000
+
+### SELENIUM ##############################################
+
+SELENIUM_PORT=4444
+
+### Mailpit #################################################
+MAILPIT_HTTP_PORT=8025
+MAILPIT_SMTP_PORT=1025
+
+### PgAdmin #################################################
+PGADMIN_DEFAULT_EMAIL=admin@mail.com
+PGADMIN_DEFAULT_PASSWORD=admin
+PGADMIN_PORT=5050
