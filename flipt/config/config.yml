@@ -1,0 +1,2 @@
+db:
+  url: file:/var/opt/flipt/flipt.db
